@@ -20,12 +20,12 @@
             color: #ffffff;
             font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            padding: 20px;
+            padding: 30px 20px 80px;
         }
 
-        /* HERO CONTAINER */
+        /* HERO */
         .hero {
             text-align: center;
             max-width: 720px;
@@ -37,7 +37,7 @@
         .logo-wrapper {
             width: 120px;
             height: 120px;
-            margin: 0 auto 24px auto;
+            margin: 0 auto 26px auto;
             border-radius: 28px; /* squircle */
             overflow: hidden;
             background: linear-gradient(145deg, #1a73e8, #4da3ff);
@@ -52,7 +52,6 @@
             display: block;
         }
 
-        /* TITLE */
         h1 {
             font-size: clamp(36px, 6vw, 56px);
             font-weight: 700;
@@ -60,7 +59,6 @@
             margin-bottom: 12px;
         }
 
-        /* TAGLINE */
         .tagline {
             font-size: clamp(18px, 3.5vw, 22px);
             opacity: 0.9;
@@ -70,7 +68,7 @@
         .author {
             font-size: 16px;
             opacity: 0.75;
-            margin-bottom: 34px;
+            margin-bottom: 36px;
         }
 
         /* BUTTON */
@@ -92,6 +90,53 @@
         .download-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 18px 50px rgba(77,163,255,0.6);
+        }
+
+        /* GUIDE SECTION */
+        .guide-section {
+            margin-top: 90px;
+            max-width: 900px;
+            width: 100%;
+            background: rgba(15, 35, 65, 0.85);
+            padding: 40px 30px;
+            border-radius: 22px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+        }
+
+        .guide-section h2 {
+            font-size: clamp(26px, 4vw, 36px);
+            color: #7fb9ff;
+            margin-bottom: 26px;
+            text-align: center;
+        }
+
+        .guide-step {
+            display: flex;
+            gap: 16px;
+            margin: 16px 0;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .step-number {
+            min-width: 34px;
+            height: 34px;
+            background: #1a73e8;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .guide-note {
+            margin-top: 28px;
+            background: rgba(255, 204, 102, 0.12);
+            border-left: 4px solid #ffcc66;
+            padding: 18px;
+            border-radius: 12px;
+            font-size: 16px;
+            line-height: 1.6;
         }
 
         /* ANIMATIONS */
@@ -117,7 +162,7 @@
             }
         }
 
-        /* MOBILE OPTIMIZATION */
+        /* MOBILE */
         @media (max-width: 480px) {
             .logo-wrapper {
                 width: 100px;
@@ -129,12 +174,21 @@
                 width: 100%;
                 justify-content: center;
             }
+
+            .guide-section {
+                padding: 30px 20px;
+            }
+
+            .guide-step {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
 
 <body>
 
+    <!-- HERO -->
     <div class="hero">
 
         <div class="logo-wrapper">
@@ -154,6 +208,48 @@
         <a class="download-btn" href="https://drive.google.com/file/d/1ZPg211IG0lCOtvGTbWXw-mCZ5gD5_4i7/view">
             ⬇ Download for Windows
         </a>
+
+    </div>
+
+    <!-- GUIDE -->
+    <div class="guide-section">
+
+        <h2>🛠 How to Download & Install</h2>
+
+        <div class="guide-step">
+            <div class="step-number">1</div>
+            <div>Click the <b>Download for Windows</b> button above.</div>
+        </div>
+
+        <div class="guide-step">
+            <div class="step-number">2</div>
+            <div>After downloading, <b>move the EXE file</b> to a normal folder like <b>Documents</b> or <b>D:\Apps</b>.</div>
+        </div>
+
+        <div class="guide-step">
+            <div class="step-number">3</div>
+            <div>Do <b>NOT</b> run the app directly from the Downloads folder.</div>
+        </div>
+
+        <div class="guide-step">
+            <div class="step-number">4</div>
+            <div>Double-click the EXE file to launch CuriousBrain AI.</div>
+        </div>
+
+        <div class="guide-step">
+            <div class="step-number">5</div>
+            <div>If Windows shows a warning, click <b>More info</b> → <b>Run anyway</b>.</div>
+        </div>
+
+        <div class="guide-note">
+            ⚠ <b>Why does Windows show this warning?</b><br>
+            CuriousBrain AI is a new and unsigned application.  
+            This warning does <b>NOT</b> mean the app is unsafe.
+            <br><br>
+            ✔ No viruses<br>
+            ✔ No malicious code<br>
+            ✔ Safe to use
+        </div>
 
     </div>
 
